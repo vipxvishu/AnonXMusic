@@ -6,7 +6,14 @@ from pyrogram import filters
 
 load_dotenv()
 
-# Get this value from my.telegram.org/apps
+# Get this value from my.telegram.org/ap
+
+
+API_URL = getenv("API_URL", 'https://api.thequickearn.xyz') #youtube song url
+API_KEY = getenv("API_KEY", "NxGBNexGenBotsd22d66") 
+
+
+ps
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
