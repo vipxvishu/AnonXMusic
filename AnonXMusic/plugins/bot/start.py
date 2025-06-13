@@ -1,5 +1,6 @@
 import time
-
+import asyncio
+import random
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -28,6 +29,25 @@ from strings import get_string
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
+
+    # Fun animated part
+    hehe_texts = [
+        "𝙃𝙚𝙝𝙚 💗",
+        "𝙃𝙚𝙝𝙚 💗🥹",
+        "𝙃𝙚𝙝𝙚 💗🥹🎀"
+    ]
+    stickers = [
+        "CAACAgQAAxkBAAOGaEv_ZzrEqKiek0wAAXF8FA0AAQFTqgACOgkAAhTL8FDqxvaN6uy7eh4E",
+        "CAACAgQAAxkBAAOFaEv_X2id5IFluhjLAAErmzZNH-fsAAJkCgAC2YdhUemgHmR3L623HgQ"
+    ]
+
+    for txt in hehe_texts:
+        await message.reply_text(txt)
+        await asyncio.sleep(0.75)
+
+    await message.reply_sticker(random.choice(stickers))
+    await asyncio.sleep(1.25)
+
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
