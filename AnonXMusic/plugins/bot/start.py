@@ -31,9 +31,9 @@ from strings import get_string
 
 
 hehe_texts = [
-    "𝙃𝙚𝙝𝙚 💗",
-    "𝙃𝙚𝙝𝙚 💗🥹",
-    "𝙃𝙚𝙝𝙚 💗🥹🎀",
+    "<b>hey qt</b>",
+    "<b>hey qt</b>",
+    "<b>hey qt</b>",
 ]
 
 stickers = [
